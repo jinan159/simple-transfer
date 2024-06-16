@@ -33,6 +33,13 @@ dependencies {
     // oracle
     runtimeOnly("com.oracle.database.jdbc:ojdbc11")
 
+    // lombok
+    val lombokVersion = "1.18.32"
+    compileOnly("org.projectlombok:lombok:$lombokVersion")
+    annotationProcessor("org.projectlombok:lombok:$lombokVersion")
+    testCompileOnly("org.projectlombok:lombok:$lombokVersion")
+    testAnnotationProcessor("org.projectlombok:lombok:$lombokVersion")
+
     // test
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.kafka:spring-kafka-test")
