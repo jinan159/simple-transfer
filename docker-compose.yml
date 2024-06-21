@@ -13,6 +13,7 @@ services:
       ORACLE_PASSWORD: "oracle"
     volumes:
       - oracle-data:/u01/app/oracle
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     healthcheck:
       test: [ "CMD-SHELL", "echo 'SELECT 1 FROM DUAL;' | sqlplus -S system/oracle@localhost:1521/XE" ]
       interval: 30s

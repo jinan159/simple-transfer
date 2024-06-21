@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:XE
-    username: system
-    password: oracle
+    username: simple_transfer
+    password: simple_transfer
     driver-class-name: oracle.jdbc.OracleDriver
   jpa:
     hibernate:
@@ -31,7 +31,7 @@ spring:
     url: jdbc:oracle:thin:@localhost:1521:XE
     user: system
     password: oracle
-    schemas: public
+    schemas: classpath:db/migration
     locations: classpath:db/migration
 
 logging:
